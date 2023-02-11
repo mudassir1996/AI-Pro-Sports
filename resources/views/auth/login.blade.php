@@ -21,8 +21,8 @@
 
                 <div class="col-xl-5 col-md-6">
                     <div class="mini-logo text-center my-5">
-                        <a href="{{ env('WEBSITE_URL') }}"><img class="w-50"
-                                src="{{ asset('images/logo.png') }}" alt=""></a>
+                        <a href="{{ env('WEBSITE_URL') }}"><img class="w-50" src="{{ asset('images/logo.png') }}"
+                                alt=""></a>
                     </div>
                     @error('account_locked')
                         <div class="text-danger p-3">
@@ -43,8 +43,9 @@
                                 @csrf
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                        name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input id="email" type="email"
+                                        class="form-control @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
                                     @error('email')
                                         <label class="error" role="alert">
                                             {{ $message }}
@@ -73,7 +74,8 @@
                                         </label>
                                     </div>
                                     <div class="form-group mb-0">
-                                        <a href="{{ route('password.request') }}">Forgot Password?</a>
+                                        <a href="{{ route('password.request') }}"
+                                            style="color: #000; text-decoration: underline;">Forgot Password?</a>
                                     </div>
                                 </div>
 

@@ -26,7 +26,7 @@
                                             width="35" height="35" alt="">
                                     @endif
                                     <span
-                                        class="name">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}</span>
+                                        class="name">{{ ucwords(strtolower(Auth::user()->first_name . ' ' . Auth::user()->last_name)) }}</span>
                                     <span class="arrow"><i class="la la-angle-down"></i></span>
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-right">

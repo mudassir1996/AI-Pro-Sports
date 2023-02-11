@@ -1,12 +1,12 @@
 <?php
 return [
-    'website_link' => 'https://techsport-global.com',
-    'website_name' => 'www.techsport-global.com',
-    'twitter' => 'https://twitter.com/TechSportGlobal',
-    'instagram' => 'https://www.instagram.com/techsportglobal',
-    'location' => 'https://goo.gl/maps/M1RD6EucjC2f8eWR6',
-    'trustpilot' => 'https://www.trustpilot.com/review/techsport-global.com',
-    'primary_color' => '#9dc938',
+    'website_link' => 'https://alprosports.co.uk',
+    'website_name' => 'www.alprosports.co.uk',
+    'twitter' => '#',
+    'instagram' => '#',
+    'location' => '#',
+    'trustpilot' => '#',
+    'primary_color' => '#B2F955',
     'footer_text' => 'This email and any attachments to it are confidential and intended solely for the person to whom they are
     addressed. They may contain legally privileged information. If you have
     received this in error, please delete this message and let us know by emailing ' . env('MAIL_FROM_ADDRESS') . '.

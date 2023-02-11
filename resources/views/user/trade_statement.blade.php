@@ -9,7 +9,7 @@
                 <div class="col-xl-6">
                     <div class="page_title-content">
                         <p>Welcome Back,
-                            <span>{{ Auth::user()->first_name }}</span>
+                            <span>{{ ucwords(strtolower(Auth::user()->first_name)) }}</span>
                         </p>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img)? ($image = asset('storage/events/' . $trade->event_img)): ($image = asset('images/' . $trade->event_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img) ? ($image = asset('storage/events/' . $trade->event_img)) : ($image = asset('images/' . $trade->event_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $trade->event_name }}</span>
@@ -126,10 +126,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img)? ($image = asset('storage/teams/' . $trade->t1_img)): ($image = asset('images/' . $trade->t1_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img) ? ($image = asset('storage/teams/' . $trade->t1_img)) : ($image = asset('images/' . $trade->t1_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t1_name }}
+                                                                            <span class="ml-2">{{ $trade->t1_name }}
                                                                                 <b>({{ $trade->team_one_score }})</b></span>
                                                                         </span>
 
@@ -138,10 +137,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img)? ($image = asset('storage/teams/' . $trade->t2_img)): ($image = asset('images/' . $trade->t2_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img) ? ($image = asset('storage/teams/' . $trade->t2_img)) : ($image = asset('images/' . $trade->t2_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t2_name }}
+                                                                            <span class="ml-2">{{ $trade->t2_name }}
                                                                                 <b>({{ $trade->team_two_score }})</b></span>
                                                                         </span>
 
@@ -162,8 +160,8 @@
                                                                 <td>
                                                                     @if ($trade->notes != '')
                                                                         <a class="round-btn notes-popover client-notes"
-                                                                            tabindex="0" role="button" data-toggle="popover"
-                                                                            data-trigger="focus"
+                                                                            tabindex="0" role="button"
+                                                                            data-toggle="popover" data-trigger="focus"
                                                                             data-content="{{ $trade->notes }}"
                                                                             href="javascript:void(0)"><i
                                                                                 class="mdi mdi-eye"></i></a>
@@ -216,7 +214,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $motoTrade->event_img)? ($image = asset('storage/events/' . $motoTrade->event_img)): ($image = asset('images/' . $motoTrade->event_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $motoTrade->event_img) ? ($image = asset('storage/events/' . $motoTrade->event_img)) : ($image = asset('images/' . $motoTrade->event_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $motoTrade->event_name }}</span>
@@ -227,7 +225,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $motoTrade->t1_img)? ($image = asset('storage/teams/' . $motoTrade->t1_img)): ($image = asset('images/' . $motoTrade->t1_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $motoTrade->t1_img) ? ($image = asset('storage/teams/' . $motoTrade->t1_img)) : ($image = asset('images/' . $motoTrade->t1_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $motoTrade->t1_name }}</span>
@@ -254,8 +252,8 @@
                                                                 <td>
                                                                     @if ($motoTrade->notes != '')
                                                                         <a class="round-btn notes-popover client-notes"
-                                                                            tabindex="0" role="button" data-toggle="popover"
-                                                                            data-trigger="focus"
+                                                                            tabindex="0" role="button"
+                                                                            data-toggle="popover" data-trigger="focus"
                                                                             data-content="{{ $motoTrade->notes }}"
                                                                             href="javascript:void(0)"><i
                                                                                 class="mdi mdi-eye"></i></a>
@@ -308,7 +306,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img)? ($image = asset('storage/events/' . $trade->event_img)): ($image = asset('images/' . $trade->event_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img) ? ($image = asset('storage/events/' . $trade->event_img)) : ($image = asset('images/' . $trade->event_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $trade->event_name }}</span>
@@ -319,10 +317,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img)? ($image = asset('storage/teams/' . $trade->t1_img)): ($image = asset('images/' . $trade->t1_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img) ? ($image = asset('storage/teams/' . $trade->t1_img)) : ($image = asset('images/' . $trade->t1_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t1_name }}
+                                                                            <span class="ml-2">{{ $trade->t1_name }}
                                                                                 <b>({{ $trade->team_one_score }})</b></span>
                                                                         </span>
 
@@ -331,10 +328,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img)? ($image = asset('storage/teams/' . $trade->t2_img)): ($image = asset('images/' . $trade->t2_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img) ? ($image = asset('storage/teams/' . $trade->t2_img)) : ($image = asset('images/' . $trade->t2_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t2_name }}
+                                                                            <span class="ml-2">{{ $trade->t2_name }}
                                                                                 <b>({{ $trade->team_two_score }})</b></span>
                                                                         </span>
 
@@ -355,8 +351,8 @@
                                                                 <td>
                                                                     @if ($trade->notes != '')
                                                                         <a class="round-btn notes-popover client-notes"
-                                                                            tabindex="0" role="button" data-toggle="popover"
-                                                                            data-trigger="focus"
+                                                                            tabindex="0" role="button"
+                                                                            data-toggle="popover" data-trigger="focus"
                                                                             data-content="{{ $trade->notes }}"
                                                                             href="javascript:void(0)"><i
                                                                                 class="mdi mdi-eye"></i></a>
@@ -409,7 +405,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img)? ($image = asset('storage/events/' . $trade->event_img)): ($image = asset('images/' . $trade->event_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img) ? ($image = asset('storage/events/' . $trade->event_img)) : ($image = asset('images/' . $trade->event_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $trade->event_name }}</span>
@@ -420,10 +416,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img)? ($image = asset('storage/teams/' . $trade->t1_img)): ($image = asset('images/' . $trade->t1_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img) ? ($image = asset('storage/teams/' . $trade->t1_img)) : ($image = asset('images/' . $trade->t1_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t1_name }}
+                                                                            <span class="ml-2">{{ $trade->t1_name }}
                                                                                 <b>({{ $trade->team_one_score }})</b></span>
                                                                         </span>
 
@@ -432,10 +427,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img)? ($image = asset('storage/teams/' . $trade->t2_img)): ($image = asset('images/' . $trade->t2_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img) ? ($image = asset('storage/teams/' . $trade->t2_img)) : ($image = asset('images/' . $trade->t2_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t2_name }}
+                                                                            <span class="ml-2">{{ $trade->t2_name }}
                                                                                 <b>({{ $trade->team_two_score }})</b></span>
                                                                         </span>
 
@@ -456,8 +450,8 @@
                                                                 <td>
                                                                     @if ($trade->notes != '')
                                                                         <a class="round-btn notes-popover client-notes"
-                                                                            tabindex="0" role="button" data-toggle="popover"
-                                                                            data-trigger="focus"
+                                                                            tabindex="0" role="button"
+                                                                            data-toggle="popover" data-trigger="focus"
                                                                             data-content="{{ $trade->notes }}"
                                                                             href="javascript:void(0)"><i
                                                                                 class="mdi mdi-eye"></i></a>
@@ -510,7 +504,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img)? ($image = asset('storage/events/' . $trade->event_img)): ($image = asset('images/' . $trade->event_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img) ? ($image = asset('storage/events/' . $trade->event_img)) : ($image = asset('images/' . $trade->event_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $trade->event_name }}</span>
@@ -521,10 +515,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img)? ($image = asset('storage/teams/' . $trade->t1_img)): ($image = asset('images/' . $trade->t1_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img) ? ($image = asset('storage/teams/' . $trade->t1_img)) : ($image = asset('images/' . $trade->t1_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t1_name }}
+                                                                            <span class="ml-2">{{ $trade->t1_name }}
                                                                                 <b>({{ $trade->team_one_score }})</b></span>
                                                                         </span>
 
@@ -533,10 +526,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img)? ($image = asset('storage/teams/' . $trade->t2_img)): ($image = asset('images/' . $trade->t2_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img) ? ($image = asset('storage/teams/' . $trade->t2_img)) : ($image = asset('images/' . $trade->t2_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t2_name }}
+                                                                            <span class="ml-2">{{ $trade->t2_name }}
                                                                                 <b>({{ $trade->team_two_score }})</b></span>
                                                                         </span>
 
@@ -557,8 +549,8 @@
                                                                 <td>
                                                                     @if ($trade->notes != '')
                                                                         <a class="round-btn notes-popover client-notes"
-                                                                            tabindex="0" role="button" data-toggle="popover"
-                                                                            data-trigger="focus"
+                                                                            tabindex="0" role="button"
+                                                                            data-toggle="popover" data-trigger="focus"
                                                                             data-content="{{ $trade->notes }}"
                                                                             href="javascript:void(0)"><i
                                                                                 class="mdi mdi-eye"></i></a>
@@ -611,7 +603,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img)? ($image = asset('storage/events/' . $trade->event_img)): ($image = asset('images/' . $trade->event_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img) ? ($image = asset('storage/events/' . $trade->event_img)) : ($image = asset('images/' . $trade->event_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $trade->event_name }}</span>
@@ -622,10 +614,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img)? ($image = asset('storage/teams/' . $trade->t1_img)): ($image = asset('images/' . $trade->t1_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img) ? ($image = asset('storage/teams/' . $trade->t1_img)) : ($image = asset('images/' . $trade->t1_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t1_name }}
+                                                                            <span class="ml-2">{{ $trade->t1_name }}
                                                                                 <b>({{ $trade->team_one_score }})</b></span>
                                                                         </span>
 
@@ -634,10 +625,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img)? ($image = asset('storage/teams/' . $trade->t2_img)): ($image = asset('images/' . $trade->t2_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img) ? ($image = asset('storage/teams/' . $trade->t2_img)) : ($image = asset('images/' . $trade->t2_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t2_name }}
+                                                                            <span class="ml-2">{{ $trade->t2_name }}
                                                                                 <b>({{ $trade->team_two_score }})</b></span>
                                                                         </span>
 
@@ -658,8 +648,8 @@
                                                                 <td>
                                                                     @if ($trade->notes != '')
                                                                         <a class="round-btn notes-popover client-notes"
-                                                                            tabindex="0" role="button" data-toggle="popover"
-                                                                            data-trigger="focus"
+                                                                            tabindex="0" role="button"
+                                                                            data-toggle="popover" data-trigger="focus"
                                                                             data-content="{{ $trade->notes }}"
                                                                             href="javascript:void(0)"><i
                                                                                 class="mdi mdi-eye"></i></a>
@@ -712,7 +702,7 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img)? ($image = asset('storage/events/' . $trade->event_img)): ($image = asset('images/' . $trade->event_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('events/' . $trade->event_img) ? ($image = asset('storage/events/' . $trade->event_img)) : ($image = asset('images/' . $trade->event_img)) }}"
                                                                                 height="30" alt="">
                                                                             <span
                                                                                 class="ml-2">{{ $trade->event_name }}</span>
@@ -723,10 +713,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img)? ($image = asset('storage/teams/' . $trade->t1_img)): ($image = asset('images/' . $trade->t1_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t1_img) ? ($image = asset('storage/teams/' . $trade->t1_img)) : ($image = asset('images/' . $trade->t1_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t1_name }}
+                                                                            <span class="ml-2">{{ $trade->t1_name }}
                                                                                 <b>({{ $trade->team_one_score }})</b></span>
                                                                         </span>
 
@@ -735,10 +724,9 @@
                                                                 <td>
                                                                     <div class="media">
                                                                         <span class="justify-content-center">
-                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img)? ($image = asset('storage/teams/' . $trade->t2_img)): ($image = asset('images/' . $trade->t2_img)) }}"
+                                                                            <img src="{{ Storage::disk('public')->exists('teams/' . $trade->t2_img) ? ($image = asset('storage/teams/' . $trade->t2_img)) : ($image = asset('images/' . $trade->t2_img)) }}"
                                                                                 height="30" alt="">
-                                                                            <span
-                                                                                class="ml-2">{{ $trade->t2_name }}
+                                                                            <span class="ml-2">{{ $trade->t2_name }}
                                                                                 <b>({{ $trade->team_two_score }})</b></span>
                                                                         </span>
 
@@ -759,8 +747,8 @@
                                                                 <td>
                                                                     @if ($trade->notes != '')
                                                                         <a class="round-btn notes-popover client-notes"
-                                                                            tabindex="0" role="button" data-toggle="popover"
-                                                                            data-trigger="focus"
+                                                                            tabindex="0" role="button"
+                                                                            data-toggle="popover" data-trigger="focus"
                                                                             data-content="{{ $trade->notes }}"
                                                                             href="javascript:void(0)"><i
                                                                                 class="mdi mdi-eye"></i></a>

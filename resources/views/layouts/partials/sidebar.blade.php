@@ -1,6 +1,5 @@
 <div class="sidebar">
-    <a class="brand-logo"
-        href="{{ auth()->user()->is_admin ? route('clients.index') : route('trade-statement') }}">
+    <a class="brand-logo" href="{{ auth()->user()->is_admin ? route('clients.index') : route('trade-statement') }}">
         <img class="w-100" src="{{ asset('images/logo.png') }}" alt="">
     </a>
     <div class="menu">
@@ -13,20 +12,20 @@
                         <span class="nav-text">Clients</span>
                     </a>
                 </li>
-                <li class="{{ request()->is('trades*') ? 'mobile-active' : '' }}"><a
-                        href="{{ route('trades.index') }}" class="{{ request()->is('trades*') ? 'active' : '' }}">
+                <li class="{{ request()->is('trades*') ? 'mobile-active' : '' }}"><a href="{{ route('trades.index') }}"
+                        class="{{ request()->is('trades*') ? 'active' : '' }}">
                         <span><i class="mdi mdi-repeat"></i></span>
                         <span class="nav-text">Trades</span>
                     </a>
                 </li>
-                <li class="{{ request()->is('events*') ? 'mobile-active' : '' }}"><a
-                        href="{{ route('events.index') }}" class="{{ request()->is('events*') ? 'active' : '' }}">
+                <li class="{{ request()->is('events*') ? 'mobile-active' : '' }}"><a href="{{ route('events.index') }}"
+                        class="{{ request()->is('events*') ? 'active' : '' }}">
                         <span><i class="mdi mdi-trophy-outline"></i></span>
                         <span class="nav-text">Events</span>
                     </a>
                 </li>
-                <li class="{{ request()->is('teams*') ? 'mobile-active' : '' }}"><a
-                        href="{{ route('teams.index') }}" class="{{ request()->is('teams*') ? 'active' : '' }}">
+                <li class="{{ request()->is('teams*') ? 'mobile-active' : '' }}"><a href="{{ route('teams.index') }}"
+                        class="{{ request()->is('teams*') ? 'active' : '' }}">
                         <span><i class="mdi mdi-tshirt-crew"></i></span>
                         <span class="nav-text">Teams</span>
                     </a>
@@ -63,8 +62,8 @@
                         <span class="nav-text">Basketball Markets</span>
                     </a>
                 </li> --}}
-                <li class="{{ request()->is('add-funds') ? 'mobile-active' : '' }}"><a
-                        href="{{ route('add-funds') }}" class="{{ request()->is('add-funds') ? 'active' : '' }}">
+                <li class="{{ request()->is('add-funds') ? 'mobile-active' : '' }}"><a href="{{ route('add-funds') }}"
+                        class="{{ request()->is('add-funds') ? 'active' : '' }}">
                         <span><i class="mdi mdi-plus-circle"></i></span>
                         <span class="nav-text">Add Funds</span>
                     </a>
@@ -99,7 +98,7 @@
             <script>
                 var CurrentYear = new Date().getFullYear()
                 document.write(CurrentYear)
-            </script> Tech Sport Global
+            </script> {{ env('APP_NAME') }}
         </div>
     </div>
 
