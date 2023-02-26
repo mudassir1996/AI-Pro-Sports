@@ -87,12 +87,12 @@
     </div>
 
     <div class="sidebar-footer">
-        {{-- <div class="social">
+        <!-- <div class="social">
             <a href="#"><i class="fa fa-youtube-play"></i></a>
             <a href="#"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-facebook"></i></a>
-        </div> --}}
+        </div> -->
         <div class="copy_right">
             <i class="mdi mdi-copyright"></i>
             <script>
