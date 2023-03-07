@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="authincation">
+    <div class="authentication">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
                 <div class="col-xl-5 col-md-6">
                     <div class="mini-logo text-center my-5">
-                        <a href="{{ env('WEBSITE_URL') }}"><img class="w-50"
+                        <a href="{{ env('WEBSITE_URL') }}"><img class="w-75"
                                 src="{{ asset('images/logo.png') }}" alt=""></a>
                     </div>
                     <div class="auth-form card">
@@ -42,6 +42,10 @@
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block">
                                         {{ __('Send Password Reset Link') }}</button>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="{{ route('login') }}" class="btn btn-primary btn-block">
+                                        {{ __('Back to login') }}</a>
                                 </div>
 
                             </form>
