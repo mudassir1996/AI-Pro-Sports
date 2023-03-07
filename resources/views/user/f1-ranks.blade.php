@@ -2,11 +2,11 @@
     const get_race = {
         "async": true,
         "crossDomain": true,
-        "url": "https://api-formula-1.p.rapidapi.com/races?competition=1&season=2022",
+        "url": "https://api-formula-1.p.rapidapi.com/races?competition=1&season=2023",
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "api-formula-1.p.rapidapi.com",
-            "x-rapidapi-key": "5a064d629amsh0e00769af305bdap180755jsnb03e3a7f19f0"
+            "x-rapidapi-key": "4274329b66msh81b9ec238ff6156p10407djsn73fa00a38654"
         }
     };
     let race_id;
@@ -27,7 +27,7 @@
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "api-formula-1.p.rapidapi.com",
-                "x-rapidapi-key": "5a064d629amsh0e00769af305bdap180755jsnb03e3a7f19f0"
+                "x-rapidapi-key": "4274329b66msh81b9ec238ff6156p10407djsn73fa00a38654"
             }
         };
         $.ajax(race_rankings).done(function(response) {

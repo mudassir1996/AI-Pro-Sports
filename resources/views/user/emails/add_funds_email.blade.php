@@ -278,7 +278,7 @@
             background-color: #fff; overflow: hidden;border-bottom: 1px solid #E2E2E2;">
                                                         <img style=" width: 180px; margin-top:20px;margin-bottom:20px;"
                                                             alt="{{ env('APP_NAME') }}"
-                                                            src="{{ asset('images/logo.png') }}">
+                                                            src="{{ asset('images/logo-dark.png') }}">
                                                     </td>
 
                                                 </tr>
@@ -488,7 +488,7 @@
                                                                                 <a href="{{ config('email_template.trustpilot') }}"
                                                                                     style="margin-right:5px;">
                                                                                     <img src="{{ asset('images/trust-pilot.png') }}"
-                                                                                        style="height:45px"
+                                                                                        style="height:20px"
                                                                                         alt="trust-pilot-icon">
                                                                                 </a>
                                                                             </td>
