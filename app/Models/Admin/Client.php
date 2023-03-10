@@ -16,6 +16,7 @@ class Client extends Model
         'last_name',
         'email',
         'profile_img',
+        'email_verified_at',
         'password',
         'is_admin',
         'is_secure',

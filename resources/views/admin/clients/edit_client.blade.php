@@ -102,6 +102,21 @@
                                     @enderror
                                     
                                 </div>
+                                <div class="form-group col-xl-3" style="margin-top:30px">
+                                    <label class="mr-sm-2">Verified</label>
+                                    <select name="is_verified" class="form-control">
+                                        <option value="0" {{ !$client->email_verified_at ? 'selected' : '' }}>
+                                            No
+                                        </option>
+                                        <option value="1" {{ $client->email_verified_at ? 'selected' : '' }}>
+                                            Yes</option>
+                                    </select>
+                                    @error('status')
+                                        <label id="status-error" class="error"
+                                            for="status">{{ $message }}</label>
+                                    @enderror
+
+                                </div>
                                 @if ($client->is_secure)
                                     <div class="form-group col-xl-3 align-self-center" style="margin-top:65px">
                                     <label class="toggle" style="margin-bottom: -2px !important;">

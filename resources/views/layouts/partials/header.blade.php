@@ -25,8 +25,16 @@
                                             src="{{ Storage::disk('public')->exists('users/' . Auth::user()->profile_img) ? asset('storage/users/' . Auth::user()->profile_img) : '' }}"
                                             width="35" height="35" alt="">
                                     @endif
-                                    <span
-                                        class="name">{{ ucwords(strtolower(Auth::user()->first_name . ' ' . Auth::user()->last_name)) }}</span>
+                                    <span class="name"
+                                        style="line-height: 1;">{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}
+                                        @if (!Auth::user()->is_admin && Auth::user()->email_verified_at)
+                                            <br>
+                                            <span style="font-size: 12px; font-weight:400; font-style:normal;">
+                                                <i class="mdi mdi-check-circle text-light mr-1"></i>
+                                                Verified Account
+                                            </span>
+                                        @endif
+                                    </span>
                                     <span class="arrow"><i class="la la-angle-down"></i></span>
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-right">

@@ -53,6 +53,9 @@
                                             </div>
                                            </td>
                                             <td>
+                                                @if ($client->email_verified_at)
+                                                    <i class="mdi mdi-check-circle text-success"></i>
+                                                @endif
                                                 {{$client->first_name}}
                                             </td>
 

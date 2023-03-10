@@ -9,6 +9,7 @@ use App\Models\Admin\Client;
 use App\Models\Admin\Trade;
 use App\Models\Admin\Transaction;
 use App\Notifications\AddClientNotification;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
@@ -207,8 +208,6 @@ class ClientController extends Controller
      */
     public function update(UpdateClientRequest $request, $id)
     {
-
-
         $id = Crypt::decrypt($id);
 
         $client = Client::find($id);
@@ -237,6 +236,7 @@ class ClientController extends Controller
             'profile_img' => $image_name,
             'password' => Crypt::encrypt($request->password),
             'is_admin' => 0,
+            'email_verified_at' => $request->is_verified ? Carbon::now() : NULL,
             'status' => $request->status,
             'is_secure' => $request->is_secure ?? 0,
         ]);
